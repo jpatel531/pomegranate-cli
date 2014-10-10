@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    pomegranate-cli (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    commander (4.2.1)
+      highline (~> 1.6.11)
+    highline (1.6.21)
+    rake (10.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.7)
+  commander
+  pomegranate-cli!
+  rake (~> 10.0)
