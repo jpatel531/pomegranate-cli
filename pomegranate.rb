@@ -37,10 +37,10 @@ class Pomegranate
 		result = []
 
 		puts "Name of source file:"
-		source = gets.chomp
+		source = STDIN.gets.chomp
 
 		puts "Name of test file:"
-		spec = gets.chomp
+		spec = STDIN.gets.chomp
 
 		loop do
 			puts "\033c"
@@ -57,7 +57,7 @@ class Pomegranate
 			when " "
 				sha = array[selection].uncolorize.split(" ").first
 				puts "\n \n Instructions: \n \n"
-				instruction = gets.chomp
+				instruction = STDIN.gets.chomp
 				result << {commit: sha, instruction: instruction, source: source, spec: spec}
 				array.delete array[selection]
 			when "\r"
@@ -72,4 +72,52 @@ class Pomegranate
 			puts "\n \n Your tutorial steps have been written to the file! \n \n"
 		end
 	end
+
+	def self.edit_file
+		steps = JSON.parse( IO.read('pomegranate.json') )
+		selection = 0
+		steps = steps.map { |step| [step["commit"], step["instruction"]] }.map {|step| step.join " " }
+		steps.map! {|step| step == steps[selection] ? step.green : step.black}
+
+		loop do 
+			puts "\033c"
+			puts "\n Press space to choose a commit to edit, or press 'q' to exit \n \n"
+			puts steps
+			c = self.read_char
+			case c
+			when "\e[A"
+			when "\e[B"
+			when " "
+
+			when "\r"
+				break unless result.empty?
+			when 'q'
+				exit
+			end
+		end
+
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end

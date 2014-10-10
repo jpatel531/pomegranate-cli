@@ -25,7 +25,7 @@ command :edit do |c|
   c.example 'description', 'command example'
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
-    # Do something or c.when_called Pomegranate-cli::Commands::Edit
+    Pomegranate.edit_file
   end
 end
 
