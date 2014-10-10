@@ -9,8 +9,8 @@ program :description, 'A tool for creating a json file to represent your tutoria
  
 command :init do |c|
   c.syntax = 'pomegranate init, [options]'
-  c.summary = ''
-  c.description = ''
+  c.summary = 'Pomegranate initializer'
+  c.description = 'Create tutorial steps from commits and give your user instructions'
   c.example 'description', 'command example'
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
@@ -20,8 +20,8 @@ end
 
 command :edit do |c|
   c.syntax = 'pomegranate edit [options]'
-  c.summary = ''
-  c.description = ''
+  c.summary = 'Update your pomegranate file'
+  c.description = 'Edit your tutorial steps'
   c.example 'description', 'command example'
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
