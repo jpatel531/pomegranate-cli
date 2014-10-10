@@ -91,6 +91,7 @@ class Pomegranate
 		loop do 
 			puts "\033c"
 			puts "\n Press space to choose a commit to edit, or press 'q' to exit \n \n"
+			steps = file_hash.map { |step| [step["commit"], step["instruction"]] }.map {|step| step.join " " }
 			steps.map! {|step| step == steps[selection] ? step.green : step.black}
 			puts steps
 			c = self.read_char
