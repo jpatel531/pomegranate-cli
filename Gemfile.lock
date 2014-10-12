@@ -8,8 +8,21 @@ GEM
   specs:
     commander (4.2.1)
       highline (~> 1.6.11)
+    diff-lcs (1.2.5)
     highline (1.6.21)
     rake (10.3.2)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.4)
 
 PLATFORMS
   ruby
@@ -19,3 +32,4 @@ DEPENDENCIES
   commander
   pomegranate-cli!
   rake (~> 10.0)
+  rspec

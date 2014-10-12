@@ -4,3 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'commander'
+
+group :test do 
+	gem 'rspec'
+end
